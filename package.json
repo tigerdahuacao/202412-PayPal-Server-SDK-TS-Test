@@ -1,0 +1,47 @@
+{
+    "name": "ts-server-sdk-test",
+    "version": "1.0.0",
+    "description": "api server",
+    "main": "index.js",
+    "scripts": {
+        "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
+        "my-test":"ts-node-dev --respawn --transpile-only src/my-test.ts",
+        "lint": "eslint src --fix",
+        "prettier": "prettier --write .",
+        "build": "tsc",
+        "test": "jest"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@paypal/paypal-server-sdk": "0.6.0",
+        "express": "^4.20.0",
+        "ts-server-sdk-test": "file:"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.10.0",
+        "@jest/globals": "^29.7.0",
+        "@types/express": "^4.17.21",
+        "@types/jest": "^29.5.14",
+        "@types/node": "^22.5.4",
+        "@typescript-eslint/eslint-plugin": "^8.5.0",
+        "eslint": "^9.10.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-prettier": "^5.2.1",
+        "globals": "^15.9.0",
+        "jest": "^29.7.0",
+        "prettier": "^3.3.3",
+        "ts-jest": "^29.2.5",
+        "ts-node-dev": "^2.0.0",
+        "typescript": "^5.6.2",
+        "typescript-eslint": "^8.5.0"
+    },
+    "lint-staged": {
+        "*.{ts,tsx,vue,js,jsx,mjs}": [
+            "npm run lint",
+            "prettier --write",
+            "git add"
+        ]
+    }
+}
